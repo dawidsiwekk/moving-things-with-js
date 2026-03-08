@@ -40,30 +40,30 @@ document.addEventListener("keydown", function (e) {
 });
 
 // UP
-function moveDodgerRight() {
-  const leftNumbers = dodger.style.left.replace("px", "");
-  const left = parseInt(leftNumbers, 10);
+function moveDodgerUp() {
+  const bottomNumbers = dodger.style.bottom.replace("px", "");
+  const bottom = parseInt(bottomNumbers, 10);
 
-  dodger.style.left = `${left + 1}px`;
+  dodger.style.bottom = `${bottom + 1}px`;
 }
 
 document.addEventListener("keydown", function (e) {
-  if (e.key === "ArrowRight") {
-    moveDodgerRight();
+  if (e.key === "ArrowUp") {
+    moveDodgerUp();
   }
 });
 
-// DOWN
-function moveDodgerRight() {
-  const leftNumbers = dodger.style.left.replace("px", "");
-  const left = parseInt(leftNumbers, 10);
+// UP
+function moveDodgerDown() {
+  const bottomNumbers = dodger.style.bottom.replace("px", "");
+  const bottom = parseInt(bottomNumbers, 10);
 
-  dodger.style.left = `${left + 1}px`;
+  dodger.style.bottom = `${bottom - 1}px`;
 }
 
 document.addEventListener("keydown", function (e) {
-  if (e.key === "ArrowRight") {
-    moveDodgerRight();
+  if (e.key === "ArrowDown") {
+    moveDodgerDown();
   }
 });
 
