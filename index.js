@@ -96,7 +96,7 @@ function moveDodgerRight() {
   playSoundOnMovement();
 
   const left = parseInt(dodger.style.left, 10);
-  dodger.style.left = `${left + 5}px`;
+  dodger.style.left = `${left + 10}px`;
 }
 
 // SOUND UP
@@ -104,7 +104,7 @@ function moveDodgerUp() {
   playSoundOnMovement();
 
   const bottom = parseInt(dodger.style.bottom, 10);
-  dodger.style.bottom = `${bottom + 5}px`;
+  dodger.style.bottom = `${bottom + 10}px`;
 }
 
 // SOUND DOWN
@@ -113,7 +113,7 @@ function moveDodgerDown() {
 
   const bottom = parseInt(dodger.style.bottom, 10);
   if (bottom > 0) {
-    dodger.style.bottom = `${bottom - 5}px`;
+    dodger.style.bottom = `${bottom - 10}px`;
   }
 }
   
