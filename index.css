@@ -1,5 +1,5 @@
 #dodger {
-  background-color: url("img/pacman.png");
+  background-image: url("img/pacman.png");
   height: 20px;
   position: absolute;
   width: 40px;
