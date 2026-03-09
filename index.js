@@ -15,7 +15,7 @@ function moveDodgerLeft() {
   const left = parseInt(leftNumbers, 10);
 
   if (left > 0) {
-    dodger.style.left = `${left - 1}px`;
+    dodger.style.left = `${left - 10}px`;
   }
 }
 
@@ -30,7 +30,7 @@ function moveDodgerRight() {
   const leftNumbers = dodger.style.left.replace("px", "");
   const left = parseInt(leftNumbers, 10);
 
-  dodger.style.left = `${left + 1}px`;
+  dodger.style.left = `${left + 10}px`;
 }
 
 document.addEventListener("keydown", function (e) {
@@ -44,7 +44,7 @@ function moveDodgerUp() {
   const bottomNumbers = dodger.style.bottom.replace("px", "");
   const bottom = parseInt(bottomNumbers, 10);
 
-  dodger.style.bottom = `${bottom + 1}px`;
+  dodger.style.bottom = `${bottom + 10}px`;
 }
 
 document.addEventListener("keydown", function (e) {
@@ -58,7 +58,7 @@ function moveDodgerDown() {
   const bottomNumbers = dodger.style.bottom.replace("px", "");
   const bottom = parseInt(bottomNumbers, 10);
 
-  dodger.style.bottom = `${bottom - 1}px`;
+  dodger.style.bottom = `${bottom - 10}px`;
 }
 
 document.addEventListener("keydown", function (e) {
@@ -71,4 +71,49 @@ document.addEventListener("keydown", function (e) {
 
 
 
+// SOUND
+
+const movementSound = document.getElementById("movementSound");
+
+// SOUND ADDED TO JS
+function playSoundOnMovement() {
+    movementSound.currentTime = 0;
+    movementSound.play();
+}
+
+// SOUND LEFT
+function moveDodgerLeft() {
+  playSoundOnMovement();
+
+  const left = parseInt(dodger.style.left, 10);
+  if (left > 0) {
+    dodger.style.left = `${left - 10}px`;
+  }
+}
+
+// SOUND RIGHT
+function moveDodgerRight() {
+  playSoundOnMovement();
+
+  const left = parseInt(dodger.style.left, 10);
+  dodger.style.left = `${left + 5}px`;
+}
+
+// SOUND UP
+function moveDodgerUp() {
+  playSoundOnMovement();
+
+  const bottom = parseInt(dodger.style.bottom, 10);
+  dodger.style.bottom = `${bottom + 5}px`;
+}
+
+// SOUND DOWN
+function moveDodgerDown() {
+  playSoundOnMovement();
+
+  const bottom = parseInt(dodger.style.bottom, 10);
+  if (bottom > 0) {
+    dodger.style.bottom = `${bottom - 5}px`;
+  }
+}
   
